@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eid al-Adha</title>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Eid al-Adha</a>
+        <div class="toggle"></div>
+        <ul class="navbar">
+            <li><a href="Home" class="active">Home</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="contact">contact</a></li>
+            <li><a href="Support">Support</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="images/stars.png" id="stars">
+        <img src="images/stars2.png" id="stars2">
+        <img src="images/moon.png" id="moon">
+        <h2 id="text">Eid Mubarak</h2>
+        <img src="images/rock.png" id="rock">
+        <img src="images/masjid.png" id="masjid">
+        <img src="images/bottom.png" id="bottom">
+        <img src="images/lamp.png" id="lamp">
+    </section>
+    <div id="content">
+        <h2>eid mubarak to you and your family</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste animi excepturi accusantium perspiciatis labore
+            rerum voluptatibus blanditiis quisquam quibusdam incidunt quasi molestiae necessitatibus impedit nisi velit,
+            veniam ab dicta corporis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis excepturi amet
+            eum ullam fuga hic neque esse accusantium commodi. Pariatur esse quam odio expedita nostrum, aut,
+            necessitatibus voluptas aliquid eveniet, inventore explicabo.<br><br> ipsum, dolor sit amet consectetur
+            adipisicing elit. Molestiae, itaque? Vel voluptates doloribus magni. Vero ex ipsam maxime ullam nisi ipsum
+            iusto quasi soluta aperiam reprehenderit, odit enim neque odio, rem sed laboriosam ipsa at. Sint molestias
+            adipisci iste rerum fugit modi quisquam id ut, voluptates officiis assumenda beatae provident numquam
+            reprehenderit delectus illum. Lorem ipsum dolor sit amet dipisicing elit. Ipsum, sequi rem quo esse cumque
+            velit doloremque sapiente atque ex quod eaque pariatur
+            numquam repudiandae quibusdam hic nesciunt voluptatem voluptates, excepturi quasi temporibus.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eaque commodi
+            placeat eveniet vero? Quaerat officia numquam, illum excepturi quod velit praesentium fugiat aperiam illo
+            eos debitis earum non repellat accusantium alias? Accusamus tempora consequuntur minus nisi. Aliquam
+            assumenda consequuntur sint vitae vel! Aliquid laborum voluptate odio numquam animi facere.
+            natus odio hic deserunt.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eaque commodi
+            placeat eveniet vero? Quaerat officia numquam, illum excepturi quod velit praesentium fugiat aperiam illo
+            eos debitis earum non repellat accusantium alias? Accusamus tempora consequuntur minus nisi. Aliquam
+            assumenda consequuntur sint vitae vel! Aliquid laborum voluptate odio numquam animi facere.
+            natus odio hic deserunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eaque commodi
+            placeat eveniet vero? Quaerat officia numquam, illum excepturi quod velit praesentium fugiat aperiam illo
+            eos debitis earum non repellat accusantium alias? Accusamus tempora consequuntur minus nisi. Aliquam
+            assumenda consequuntur sint vitae vel! Aliquid laborum voluptate odio numquam animi facere.<br><br>Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ad fuga assumenda nisi, repellendus
+            nemo corporis maiores, quibusdam, iure cumque harum culpa expedita. Vero, mollitia animi. Repudiandae natus
+            aliquam at ut quia animi molestias officia facilis perspiciatis consectetur voluptatibus nostrum tempore
+            perferendis, consequuntur dignissimos omnis provident ducimus aut autem eos? Quos consequuntur assumenda
+            eveniet! Consectetur facilis sequi libero odit quibusdam quisquam ducimus? Aperiam minima dignissimos
+            suscipit! Ipsa, laborum tenetur est veritatis, sequi, harum ipsam exercitationem eos ullam aspernatur quae?
+            Tenetur porro, nostrum similique repudiandae vitae, quam dignissimos minima nam blanditiis esse culpa
+            praesentium et aliquid perspiciatis quas cumque.
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let stars2 = document.getElementById('stars2');
+        let moon = document.getElementById('moon');
+        let rock = document.getElementById('rock');
+        let masjid = document.getElementById('masjid');
+        let text = document.getElementById('text');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.bottom = value * 0.06 + '%';
+            stars2.style.bottom = value * 0.075 + '%';
+            moon.style.bottom = value * -0.5 + 'px';
+            rock.style.bottom = value * -0.50 + 'px';
+            masjid.style.bottom = value * -0.15 + 'px';
+            text.style.right = -100 + value * 0.6 + '%';
+            text.style.top = 30 + value * 0.1 + '%';
+            header.style.top = value * 0.1 + 'px';
+        })
+
+
+        const menu = document.querySelector('.toggle');
+        const navbar = document.querySelector('.navbar')
+        menu.onclick = function () {
+            menu.classList.toggle('active')
+            navbar.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>

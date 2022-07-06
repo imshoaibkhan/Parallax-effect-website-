@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+}
+
+body{
+    background: linear-gradient(#8b016a,#6f1159) ;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+#header{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    align-items: center;
+    z-index: 10000;
+}
+#header .logo{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-weight: 2rem;
+    text-transform: uppercase;
+}
+#header .navbar{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+#header .navbar li{
+    margin-left: 20px;
+    list-style: none;
+}
+#header .navbar li a{
+    color: white;
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 25px;
+    text-transform: capitalize;
+}
+#header .navbar li a:hover
+,#header .navbar li a.active{
+    background-color: white;
+    color: black;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+section img#lamp{
+    mix-blend-mode: screen;
+}
+section img#masjid{
+    transform: translateY(-20px);
+}
+section img#stars2{
+    display: none;
+}
+
+section h2#text{
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50);
+    color: white;
+    font-size: 9vw;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.50);
+    /* font-family: 'The Nautigal', cursive; */
+}
+div#content{
+    position: relative;
+    padding: 100px;
+    background:#96283a;
+}
+div h2{
+    font-size: 3em;
+    padding-bottom: 20px;
+    color: white;
+    text-transform: capitalize;
+}
+div p{
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+@media(max-width:992px){
+    body{
+        overflow-x: hidden;
+    } 
+    #header{
+        padding: 20px;
+    }
+    #header .logo{
+        font-size: 1.5em;
+    }
+    #header .navbar{
+        display: none;
+    }
+    #header .navbar.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        background: #6f1159;
+        z-index: 1000;
+    }
+    #header .navbar li{
+        margin-left: 0;
+    }
+    #header .navbar li a{
+        font-size: 1.2em;
+        display: inline-block;
+        margin: 7px 0;
+    }
+    .toggle{
+        position: relative;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        background: url('images/menu.png');
+        background-position: center;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+    .toggle.active{
+        position: fixed;
+        top: 20px;
+        right: 53%;
+        background: url('images/close.png');
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+    .section{
+        padding: 20px;
+    }
+    div h2{
+        font-size: 2em;
+    }
+    section img#stars2{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    section img#masjid{
+        transform: translateY(-5px);
+    }
+    #text{
+        font-size: 15vw;
+    
+    }
+
+}
